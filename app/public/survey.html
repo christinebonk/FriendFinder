@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Friend Finder</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<!--Header-->
+	<header>
+		<h1>Survey</h1>
+	</header>
+	<!--Main-->
+	<main>
+		<!--Form-->
+		<form action="Post">
+			<!--Form Top-->
+			<div class="form-top">
+				<label for="name">Name</label>
+				<input type="text" id="name" placeholder="Your Name" required>
+				<label name="picture" for="picture">Photo</label>
+				<input type="text" id="picture" placeholder="Upload your photo" required>
+			</div>
+			<!--Form Bottom-->
+			<div class="form-bottom">
+				<!--Q1-->
+				<legend for="q1">You find it easy to stay relaxed even when there is some pressure.</legend>
+				<div class="answers">
+					<input type="radio" name="q1" id="11" class="disagree max" value="-2"><label for="q1-1">Strongly Disagree</label>
+					<input type="radio" name="q1" id="11" class="disagree min" value="-1"><label for="q1-1">Disagree</label>
+					<input type="radio" name="q1" id="11" class="neutral" value="0"><label for="q1-1">Neutral</label>
+					<input type="radio" name="q1" id="11" class="agree min" value="1"><label for="q1-1">Strongly Disagree</label>
+					<input type="radio" name="q1" id="11" class="agree max" value="2"><label for="q1-1">Strongly Disagree</label>
+				</div>
+
+			</div>
+		</form>
+	</main>
+	
+</body>
+</html>
