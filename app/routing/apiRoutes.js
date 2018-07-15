@@ -24,17 +24,16 @@ function apiRoutes(app) {
 		//compare friends
 		topFriend(you, friends);
 
-		//add you
+		//add new person to array
 		friends.push(you);
 
+		//write new person to file
 		friends = JSON.stringify(friends);
 		fs.writeFile(__dirname + "/../data/friends.js", friends, function (err) {
 		  if (err) return console.log(err);
 		});	
 	});
 }
-
-
 
 module.exports = apiRoutes;
 
