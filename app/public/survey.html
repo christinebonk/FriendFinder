@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Friend Finder</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="style/homestyle.css">
 	<link rel="stylesheet" href="/style/style.css">
 </head>
-<body>
+<body id="survey">
 	<!--Header-->
 	<header>
-		<h1>Survey</h1>
+		<h1>Tell us about yourself</h1>
 	</header>
 	<!--Main-->
 	<main>
@@ -16,10 +18,10 @@
 		<form action="/api/friends" method="POST">
 			<!--Form Top-->
 			<div class="form-top">
-				<label for="name">Name</label>
-				<input type="text" name="name" id="name" placeholder="Your Name" required>
-				<label name="picture" for="picture">Photo</label>
-				<input type="text" name="picture" id="picture" placeholder="Upload your photo" required>
+				<label class="visually-hidden" for="name">Name</label>
+				<input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+				<label class="visually-hidden" name="picture" for="picture">Link to photo</label>
+				<input type="text" name="picture" id="picture" placeholder="Paste link to Your Photo" required>
 			</div>
 			<!--Form Middle-->
 			<div class="form-middle">
@@ -53,7 +55,7 @@
 				</div>
 				<!--Q2-->
 				<div class="question-box">
-					<legend for="q2">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<legend for="q2">You are almost never late for your appointments.</legend>
 					<div class="answers">
 						<p class="disagree-text">Disagree</p>
 						<div class="button-container" >
@@ -81,7 +83,7 @@
 				</div>
 				<!--Q3-->
 				<div class="question-box">
-					<legend for="q3">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<legend for="q3">You enjoy having a wide circle of acquaintances.</legend>
 					<div class="answers">
 						<p class="disagree-text">Disagree</p>
 						<div class="button-container" >
@@ -109,7 +111,7 @@
 				</div>
 				<!--Q4-->
 				<div class="question-box">
-					<legend for="q4">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<legend for="q4">You feel involved when watching TV soaps.</legend>
 					<div class="answers">
 						<p class="disagree-text">Disagree</p>
 						<div class="button-container" >
@@ -137,7 +139,7 @@
 				</div>
 				<!--Q5q6-->
 				<div class="question-box">
-					<legend for="q5">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<legend for="q5">When making a decision, you rely more on your feelings than on analysis of the situation.</legend>
 					<div class="answers">
 						<p class="disagree-text">Disagree</p>
 						<div class="button-container" >
@@ -165,7 +167,7 @@
 				</div>
 				<!--q6-->
 				<div class="question-box">
-					<legend for="q6">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<legend for="q6">You believe the best decision is one which can be easily changed.</legend>
 					<div class="answers">
 						<p class="disagree-text">Disagree</p>
 						<div class="button-container" >
@@ -193,7 +195,7 @@
 				</div>
 				<!--q7-->
 				<div class="question-box">
-					<legend for="q7">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<legend for="q7">You are inclined to rely more on improvisation than on prior planning.</legend>
 					<div class="answers">
 						<p class="disagree-text">Disagree</p>
 						<div class="button-container" >
@@ -221,7 +223,7 @@
 				</div>
 				<!--q8-->
 				<div class="question-box">
-					<legend for="q8">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<legend for="q8">You know how to put every minute of your time to good purpose.</legend>
 					<div class="answers">
 						<p class="disagree-text">Disagree</p>
 						<div class="button-container" >
@@ -249,7 +251,7 @@
 				</div>
 				<!--q9-->
 				<div class="question-box">
-					<legend for="q9">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<legend for="q9">After prolonged socializing you feel you need to get away and be alone.</legend>
 					<div class="answers">
 						<p class="disagree-text">Disagree</p>
 						<div class="button-container" >
@@ -277,7 +279,7 @@
 				</div>
 				<!--q10-->
 				<div class="question-box">
-					<legend for="q10">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<legend for="q10">You get bored if you have to read theoretical books</legend>
 					<div class="answers">
 						<p class="disagree-text">Disagree</p>
 						<div class="button-container" >

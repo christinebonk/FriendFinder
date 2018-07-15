@@ -13,7 +13,7 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 }
 
 html {
-	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 form p {
@@ -22,20 +22,51 @@ form p {
 	font-weight: bold;
 }
 
+#survey {
+	background: #00CDD3;
+}
+
+#survey h1 {
+	font-size: 50px;
+}
+
 .agree-text {
-	color: #20BB48;
+	color: #80DC33;
 }
 
 .disagree-text {
-	color: #BB2020;
+	color: #CF4F1F;
 }
 
 
 /*Form*/
 
+.form-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background: #FFD500;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.form-top input {
+	width: 30%;
+	margin: 10px;
+	text-align: center;
+	padding: 5px;
+	border-radius: 4px;
+	border: 1px solid grey;
+
+}
+
 form {
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px grey;
 	max-width: 900px;
 	margin: 0 auto;
+	background: rgba(255,255,255,0.9);
 }
 
 legend {
@@ -94,7 +125,7 @@ legend {
   width: 25px;
   background-color: white;
   border-radius: 50%;
-  border: 4px solid grey;
+  border: 4px solid #AFAAAA;
   z-index: 1;
   transition: all 0.3s ease;
 }
@@ -110,35 +141,35 @@ legend {
 }
 
 .checkmark.agree {
-	border: 4px solid #20BB48;
+	border: 4px solid #80DC33;
 }
 
 .checkmark.disagree {
-	border: 4px solid #BB2020;
+	border: 4px solid #CF4F1F;
 }
 
 .button-container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: #AFAAAA;
 }
 
 .button-container:hover input ~ .checkmark.agree {
-  background-color: #53CF73;
+  background-color: #80DC33;
 }
 
 .button-container:hover input ~ .checkmark.disagree {
-  background-color: #BE5E5E;
+  background-color: #CF4F1F;
 }
 
 .button-container input:checked ~ .checkmark {
-  background-color: grey;
+  background-color: #AFAAAA;
 }
 
 .button-container input:checked ~ .checkmark.agree {
-  background-color: #20BB48;
+  background-color: #80DC33;
 }
 
 .button-container input:checked ~ .checkmark.disagree {
-  background-color: #BB2020;
+  background-color: #CF4F1F;
 }
 
 .button-container input:checked ~ .checkmark:after {
@@ -152,5 +183,34 @@ legend {
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+.form-bottom {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+.form-bottom button {
+	background-color: #009398;
+	border-radius: 10px;
+	color: #FFFFFF;
+	width: 200px;
+	height: 43px;
+	padding: 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	transition: background 0.3s ease;
+}
+
+.form-bottom button:hover {
+	background: #00CDD3;
+	cursor: pointer;
 }
 
