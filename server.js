@@ -13,10 +13,9 @@ app.use(express.static(path.join(__dirname, './app/public')));
 
 
 htmlRoutes(app);
-
 apiRoutes(app);
 
 
-app.listen(port, function(){
+app.listen(process.env.PORT || port, function(){
     console.log("Listening on PORT " + port);
 });
