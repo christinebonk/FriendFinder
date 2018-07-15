@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Friend Finder</title>
-	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
 	<!--Header-->
@@ -13,26 +13,300 @@
 	<!--Main-->
 	<main>
 		<!--Form-->
-		<form action="Post">
+		<form action="/api/friends" method="POST">
 			<!--Form Top-->
 			<div class="form-top">
 				<label for="name">Name</label>
-				<input type="text" id="name" placeholder="Your Name" required>
+				<input type="text" name="name" id="name" placeholder="Your Name" required>
 				<label name="picture" for="picture">Photo</label>
-				<input type="text" id="picture" placeholder="Upload your photo" required>
+				<input type="text" name="picture" id="picture" placeholder="Upload your photo" required>
+			</div>
+			<!--Form Middle-->
+			<div class="form-middle">
+				<!--Q1-->
+				<div class="question-box">
+					<legend for="q1">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q1" id="q1-1"  value="1"><label class="visually-hidden" for="q1-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q1" id="q1-2" value="2"><label class="visually-hidden" for="q1-2">Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q1" id="q1-3" value="3"><label class="visually-hidden" for="q1-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q1" id="q1-4"  value="4"><label class="visually-hidden" for="q1-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q1" id="q1-5" value="5"><label class="visually-hidden" for="q1-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
+				<!--Q2-->
+				<div class="question-box">
+					<legend for="q2">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q2" id="q2-1"  value="1"><label class="visually-hidden" for="q2-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q2" id="q2-2" value="2"><label class="visually-hidden" for="q2-2"> Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q2" id="q2-3" value="3"><label class="visually-hidden" for="q2-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q2" id="q2-4"  value="4"><label class="visually-hidden" for="q2-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q2" id="q2-5" value="5"><label class="visually-hidden" for="q2-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
+				<!--Q3-->
+				<div class="question-box">
+					<legend for="q3">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q3" id="q3-1"  value="1"><label class="visually-hidden" for="q3-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q3" id="q3-2" value="2"><label class="visually-hidden" for="q3-2"> Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q3" id="q3-3" value="3"><label class="visually-hidden" for="q3-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q3" id="q3-4"  value="4"><label class="visually-hidden" for="q3-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q3" id="q3-5" value="5"><label class="visually-hidden" for="q3-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
+				<!--Q4-->
+				<div class="question-box">
+					<legend for="q4">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q4" id="q4-1"  value="1"><label class="visually-hidden" for="q4-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q4" id="q4-2" value="2"><label class="visually-hidden" for="q4-2"> Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q4" id="q4-3" value="3"><label class="visually-hidden" for="q4-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q4" id="q4-4"  value="4"><label class="visually-hidden" for="q4-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q4" id="q4-5" value="5"><label class="visually-hidden" for="q4-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
+				<!--Q5q6-->
+				<div class="question-box">
+					<legend for="q5">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q5" id="q5-1"  value="1"><label class="visually-hidden" for="q5-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q5" id="q5-2" value="2"><label class="visually-hidden" for="q5-2"> Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q5" id="q5-3" value="3"><label class="visually-hidden" for="q5-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q5" id="q5-4"  value="4"><label class="visually-hidden" for="q5-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q5" id="q5-5" value="5"><label class="visually-hidden" for="q5-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
+				<!--q6-->
+				<div class="question-box">
+					<legend for="q6">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q6" id="q6-1"  value="1"><label class="visually-hidden" for="q6-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q6" id="q6-2" value="2"><label class="visually-hidden" for="q6-2"> Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q6" id="q6-3" value="3"><label class="visually-hidden" for="q6-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q6" id="q6-4"  value="4"><label class="visually-hidden" for="q6-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q6" id="q6-5" value="5"><label class="visually-hidden" for="q6-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
+				<!--q7-->
+				<div class="question-box">
+					<legend for="q7">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q7" id="q7-1"  value="1"><label class="visually-hidden" for="q7-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q7" id="q7-2" value="2"><label class="visually-hidden" for="q7-2"> Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q7" id="q7-3" value="3"><label class="visually-hidden" for="q7-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q7" id="q7-4"  value="4"><label class="visually-hidden" for="q7-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q7" id="q7-5" value="5"><label class="visually-hidden" for="q7-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
+				<!--q8-->
+				<div class="question-box">
+					<legend for="q8">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q8" id="q8-1"  value="1"><label class="visually-hidden" for="q8-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q8" id="q8-2" value="2"><label class="visually-hidden" for="q8-2"> Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q8" id="q8-3" value="3"><label class="visually-hidden" for="q8-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q8" id="q8-4"  value="4"><label class="visually-hidden" for="q8-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q8" id="q8-5" value="5"><label class="visually-hidden" for="q8-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
+				<!--q9-->
+				<div class="question-box">
+					<legend for="q9">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q9" id="q9-1"  value="1"><label class="visually-hidden" for="q9-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q9" id="q9-2" value="2"><label class="visually-hidden" for="q9-2"> Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q9" id="q9-3" value="3"><label class="visually-hidden" for="q9-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q9" id="q9-4"  value="4"><label class="visually-hidden" for="q9-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q9" id="q9-5" value="5"><label class="visually-hidden" for="q9-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
+				<!--q10-->
+				<div class="question-box">
+					<legend for="q10">You find it easy to stay relaxed even when there is some pressure.</legend>
+					<div class="answers">
+						<p class="disagree-text">Disagree</p>
+						<div class="button-container" >
+							<input type="radio" name="q10" id="q10-1"  value="1"><label class="visually-hidden" for="q10-1">Strongly Disagree</label>
+							<span class="checkmark disagree max"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q10" id="q10-2" value="2"><label class="visually-hidden" for="q10-2"> Disagree</label>
+							<span class="checkmark disagree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q10" id="q10-3" value="3"><label class="visually-hidden" for="q10-3">Neutral</label>
+							<span class="checkmark neutral"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q10" id="q10-4"  value="4"><label class="visually-hidden" for="q10-4">Agree</label>
+							<span class="checkmark agree min"></span>
+						</div>
+						<div class="button-container">
+							<input type="radio" name="q10" id="q10-5" value="5"><label class="visually-hidden" for="q10-5">Strongly Agree</label>
+							<span class="checkmark agree max"></span>
+						</div>
+						<p class="agree-text">Agree</p>
+					</div>
+				</div>
 			</div>
 			<!--Form Bottom-->
 			<div class="form-bottom">
-				<!--Q1-->
-				<legend for="q1">You find it easy to stay relaxed even when there is some pressure.</legend>
-				<div class="answers">
-					<input type="radio" name="q1" id="11" class="disagree max" value="-2"><label for="q1-1">Strongly Disagree</label>
-					<input type="radio" name="q1" id="11" class="disagree min" value="-1"><label for="q1-1">Disagree</label>
-					<input type="radio" name="q1" id="11" class="neutral" value="0"><label for="q1-1">Neutral</label>
-					<input type="radio" name="q1" id="11" class="agree min" value="1"><label for="q1-1">Strongly Disagree</label>
-					<input type="radio" name="q1" id="11" class="agree max" value="2"><label for="q1-1">Strongly Disagree</label>
-				</div>
-
+				<button type="submit">Submit</button>
 			</div>
 		</form>
 	</main>

@@ -4,3 +4,153 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+.visually-hidden { 
+    position: absolute !important;
+    height: 1px; width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+html {
+	font-family: sans-serif;
+}
+
+form p {
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.agree-text {
+	color: #20BB48;
+}
+
+.disagree-text {
+	color: #BB2020;
+}
+
+
+/*Form*/
+
+form {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+legend {
+	text-align: center;
+	font-size: 20px;
+
+}
+
+.question-box {
+	padding: 20px 10px;
+	border: 1px #D7D7D7 dotted;
+}
+
+.answers {
+	margin: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.button-container {
+  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.form-middle label {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.button-container input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  transform: scale(4);
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  border: 4px solid grey;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.checkmark.max {
+	height: 45px;
+  	width: 45px;
+}
+
+.checkmark.min {
+	height: 35px;
+  	width: 35px;
+}
+
+.checkmark.agree {
+	border: 4px solid #20BB48;
+}
+
+.checkmark.disagree {
+	border: 4px solid #BB2020;
+}
+
+.button-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.button-container:hover input ~ .checkmark.agree {
+  background-color: #53CF73;
+}
+
+.button-container:hover input ~ .checkmark.disagree {
+  background-color: #BE5E5E;
+}
+
+.button-container input:checked ~ .checkmark {
+  background-color: grey;
+}
+
+.button-container input:checked ~ .checkmark.agree {
+  background-color: #20BB48;
+}
+
+.button-container input:checked ~ .checkmark.disagree {
+  background-color: #BB2020;
+}
+
+.button-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.button-container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
