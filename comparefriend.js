@@ -19,7 +19,7 @@ function topFriend(friend1, friendArr) {
 			topFriend = current;
 		}
 	}
-	console.log(topFriend.name);
+	return topFriend;
 }
 
 

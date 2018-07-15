@@ -2,8 +2,7 @@ var path = require("path");
 var fs = require("fs");
 var bodyParser = require('body-parser');
 var friends = JSON.parse(fs.readFileSync("app/data/friends.js", "utf8"));
-var MakePerson = require("../../makeperson.js")
-var topFriend = require("../../comparefriend.js")
+var topFriend = require("../../comparefriend.js");
 
 function apiRoutes(app) {
 
@@ -13,16 +12,12 @@ function apiRoutes(app) {
 	});
 
 	app.post("/api/friends", function(request, response){
-		//parse data
-		var name = request.body.name;
-		var picture = request.body.picture;
-		var array = [request.body.q1, request.body.q2, request.body.q3, request.body.q4, request.body.q5, request.body.q6, request.body.q7, request.body.q8, request.body.q9, request.body.q10];
 
 		// contruct friend
-		var you = new MakePerson(name,picture,array);
+		var you = request.body;
 		
 		//compare friends
-		topFriend(you, friends);
+		var top = topFriend(you, friends);
 
 		//add new person to array
 		friends.push(you);
@@ -32,7 +27,12 @@ function apiRoutes(app) {
 		fs.writeFile(__dirname + "/../data/friends.js", friends, function (err) {
 		  if (err) return console.log(err);
 		});	
+
+		response.json({name: top.name, photo: top.photo});
+
+		response.redirect('/');
 	});
+
 }
 
 module.exports = apiRoutes;

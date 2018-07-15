@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="style/homestyle.css">
 	<link rel="stylesheet" href="/style/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body id="survey">
 	<!--Header-->
@@ -15,7 +16,7 @@
 	<!--Main-->
 	<main>
 		<!--Form-->
-		<form action="/api/friends" method="POST">
+		<form>
 			<!--Form Top-->
 			<div class="form-top">
 				<label class="visually-hidden" for="name">Name</label>
@@ -308,10 +309,64 @@
 			</div>
 			<!--Form Bottom-->
 			<div class="form-bottom">
-				<button type="submit">Submit</button>
+				<button id="submit" type="submit">Submit</button>
 			</div>
 		</form>
+		<!--Modal-->
+		<div id="myModal" class="modal">
+		  <div class="modal-content">
+		    <span id="close" class="close">&times;</span>
+		    <h3>Your perfect match is <span id="match">No one!</span></h3>
+		    <img id="match-img" src="https://placeimg.com/640/480/any">
+		  </div>
+		</div>
 	</main>
+	<script>
+		var modal = document.getElementById('myModal');
+		
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        $("#myModal").toggleClass("show");
+		    }
+		}
+
+		$("#close").on("click", function() {
+			$("#myModal").toggleClass("show");
+		})
+
+    // Capture the form inputs
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#picture").val(),
+          scores: [
+            $( "input[type=radio][name=q1]:checked" ).val(),
+            $( "input[type=radio][name=q2]:checked" ).val(),
+            $( "input[type=radio][name=q3]:checked" ).val(),
+            $( "input[type=radio][name=q4]:checked" ).val(),
+            $( "input[type=radio][name=q5]:checked" ).val(),
+            $( "input[type=radio][name=q6]:checked" ).val(),
+            $( "input[type=radio][name=q7]:checked" ).val(),
+            $( "input[type=radio][name=q8]:checked" ).val(),
+            $( "input[type=radio][name=q9]:checked" ).val(),
+            $( "input[type=radio][name=q10]:checked" ).val(),
+          ]
+        };
+
+        $.post("/api/friends", userData, function(data) {
+          $("#match").text(data.name);
+          $("#match-img").attr("src", data.photo);
+          $("#myModal").toggleClass("show");
+
+        });
+    });
+	</script>
+
+	<script link="../routing/apiRoutes.js"></script>
+
+
 	
 </body>
 </html>
