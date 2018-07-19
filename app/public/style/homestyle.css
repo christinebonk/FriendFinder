@@ -8,6 +8,23 @@ html {
 	font-family: 'Montserrat', sans-serif;
 }
 
+nav {
+	position: fixed;
+	width: 100%;
+	background: #009398;
+	top: 0;
+	text-align: right;
+	padding: 10px;
+}
+
+nav a {
+	color: white;
+}
+
+nav a:hover {
+	color: rgba(255, 0, 0, 0.4);
+}
+
 h1 {
 	font-size: 100px;
 	color: white;
